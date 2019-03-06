@@ -15,6 +15,10 @@ class App extends Component {
     };
   }
 
+  deleteTodo(e) {
+    
+  }
+
   handleChange(e) {
     this.setState({ newTodoDescription: e.target.value })
   }
@@ -23,7 +27,7 @@ class App extends Component {
     e.preventDefault();
     if (!this.state.newTodoDescription) { return }
     const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
-    this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });    
+    this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
   }
 
   toggleComplete(index) {
